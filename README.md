@@ -2,26 +2,26 @@
 ## ObjectARX：开发人员指南
 ### ObjectARX 初步概念
 #### ObjectARX 概述
-ObjectARX® 是 AutoCAD® 运行时扩展编程环境，其中包含了 C++ 库，可以用来开发 AutoCAD 应用程序、扩展 AutoCAD 类和协议，并创建与内置 AutoCAD 命令相同方式运行的新命令。您可以添加新类并将其导出供其他程序使用。您还可以通过在现有 AutoCAD 类中添加函数来在运行时扩展 ObjectARX 协议。
+ObjectARX® 是 AutoCAD®-运行时扩展编程环境，其中包含了 C++ 库，可以用来开发 AutoCAD 应用程序、扩展 AutoCAD 类和协议，并创建与内置 AutoCAD 命令相同方式运行的新命令。您可以添加新类并将其导出供其他程序使用。您还可以通过在现有 AutoCAD 类中添加函数来在运行时扩展 ObjectARX 协议。
 
 ObjectDBX™ 是 ObjectARX 和 RealDWG® SDK 的基础。
 
 本节定义了这些术语，提供了一些重要的 ObjectARX 和 ObjectDBX 类组的概述，并提供了有关开始使用 ObjectARX 的信息。ObjectARX 开发人员指南假定您熟悉 C++、面向对象编程和 AutoCAD。
 ##### ObjectARX 编程环境
-ObjectARX®编程环境提供了一个面向对象的C++应用程序编程接口，供开发人员使用、定制和扩展AutoCAD®。一个ObjectARX应用程序是一个动态链接库(DLL)，共享AutoCAD的地址空间，并直接调用AutoCAD的函数。
+ObjectARX® 编程环境提供了一个面向对象的C++应用程序编程接口，供开发人员使用、定制和扩展 AutoCAD®。一个 ObjectARX      应用程序是一个动态链接库(DLL)，共享 AutoCAD 的地址空间，并直接调用 AutoCAD 的函数。
 
-ObjectARX库包括一个多功能的工具集，供应用程序开发人员利用AutoCAD的开放式体系结构，直接访问AutoCAD数据库结构、图形系统和本地命令定义。此外，这些库还设计为与以下技术相结合使用：
+ObjectARX 库包括一个多功能的工具集，供应用程序开发人员利用 AutoCAD 的开放式体系结构，直接访问 AutoCAD 数据库结构、图形系统和本地命令定义。此外，这些库还设计为与以下技术相结合使用：
 
-AutoLISP和Visual LISP
-.NET框架(仅限Windows)
-ActiveX®自动化和COM(仅限Windows)
-以下术语描述了与ObjectARX密切相关的技术：
+AutoLISP 和 Visual LISP
+.NET 框架(仅限Windows)
+ActiveX® 自动化和 COM(仅限Windows)
+以下术语描述了与 ObjectARX 密切相关的技术：
 
 ObjectDBX™
-ObjectARX的数据库相关子集，包括支持自定义对象和实体。这些API不包括与AutoCAD编辑器交互或提供用户界面功能的类。
+ObjectARX 的数据库相关子集，包括支持自定义对象和实体。这些 API 不包括与 AutoCAD 编辑器交互或提供用户界面功能的类。
 
 RealDWG®
-一款单独授权的SDK，用于开发使用ObjectDBX在没有AutoCAD的情况下读写DWG和DXF文件的主机应用程序。有关RealDWG SDK的更多信息，请参见autodesk.com开发人员中心。
+一款单独授权的 SDK，用于开发使用ObjectDBX在没有AutoCAD的情况下读写DWG和DXF文件的主机应用程序。有关RealDWG SDK的更多信息，请参见autodesk.com开发人员中心。
 
 对象使能器
 一个模块，具有.dbx扩展名，使用ObjectARX SDK的ObjectDBX部分定义自定义DWG和DXF数据库对象和实体。对象使能器不依赖于AutoCAD，并且可以在任何RealDWG主机应用程序中加载。
